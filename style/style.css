@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&display=swap");
+
+:root{
+    /*primary colors*/
+    --cyan: hsl(179, 62%, 43%);
+    --gr-ye: hsl(71, 73%, 54%);
+    --white: hsl(0, 100%, 100%);
+    /*neutral colors*/
+    --li-gr: hsl(204, 43%, 93%);
+    --cyan-al: hsla(179, 62%, 43%, 0.9);
+    --gr-bl: hsl(218, 22%, 67%);
+    --white-al: hsla(0, 100%, 100%,0.7);
+
+    /*default font*/
+    --def-font: 16px;
+}
+
+/*resets*/
+html,body,main,h1,h2,p,ul,
+span,div,section,footer,button{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    font-family: 'Karla',sans-serif;
+    font-size: var(--def-font);
+    list-style-position: inside;
+}
+
+/*box sizing*/
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+/*body structure and skin*/
+body{
+    --bg-color: var(--li-gr);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+/*community card grid structure*/
+.community-card{
+    max-width: 39.62em;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,auto); 
+    overflow: hidden;
+}
+
+/*community card grid skin*/
+.community-card{
+    box-shadow: 0 0 17px -4px var(--gr-bl);
+}
+
+/*grid item 1*/
+.gr-item:nth-of-type(1){
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    border-radius: 0.56rem 0.56rem 0 0;
+    
+}
+
+/*grid item 2*/
+.gr-item:nth-of-type(2){
+    grid-column: 1/2;
+    grid-row: 2/-1;
+    border-radius: 0 0 0 0.56rem;
+    
+}
+
+/*grid item 3*/
+.gr-item:nth-of-type(3){
+    grid-column: 2/-1;
+    grid-row: 2/-1;
+    border-radius: 0 0 0.56rem 0;
+}
+
+/*flex display*/
+.flex-row-center{
+    display: flex;
+    align-items: center;
+}
+ 
+/*colors and background-colors*/
+.cl-cyan{
+    color: var(--cyan);
+}
+
+.cl-white{
+    color: var(--white);
+}
+
+.cl-gr-ye{
+    color: var(--gr-ye);
+}
+.cl-gray-bl{
+    color: var(--gr-bl);
+}
+
+.cl-white-al{
+    color: var(--white-al);
+}
+.bg-cyan{
+    background: var(--cyan);
+}
+
+.bg-cyan-al{
+    background: var(--cyan-al);
+}
+
+.bg-white{
+    background: var(--white);
+}
+
+/*headings, font-sizes, line-heights and font weights*/
+.head-1{
+    font-size: 1.5rem;
+}
+
+.head-2{
+    font-size: 1.1rem;
+}
+
+.head-3{
+    font-size: 2rem;
+}
+
+.fnt-wght-800{
+    font-weight: 800;
+}
+
+.fnt-1{
+    font-size: 0.9rem;
+}
+
+.fnt-2{
+    font-size: 0.98rem;
+}
+.li-hi-1{
+    line-height: 1.8;
+}
+.li-hi-2{
+    line-height: 1.4;
+}
+
+/*paddings and margins*/
+
+.padd-1{
+    padding: 2.81rem 2.43rem 1.9rem;
+}
+
+.padd-2{
+    padding: 3rem 2.4rem 2rem;
+}
+
+.padd-btn{
+    padding: 1rem;
+}
+
+.marg-bot-31{
+    margin-bottom: 1.9rem;
+}
+
+.marg-bot-10{
+    margin-bottom: 0.6rem;
+}
+
+.marg-bot-16{
+    margin-bottom: 1rem;
+}
+
+.marg-left-15{
+    margin-left: 0.93rem;
+}
+
+/*button struct*/
+.btn{
+    width: 100%;
+    border-radius: .5rem;
+}
+
+/*button skin*/
+.btn-cyan{
+    background: var(--gr-ye);
+    color: var(--white);
+    box-shadow: 0 0 7px 2px rgb(146, 145, 145);
+}
+
+/*button hover*/
+.btn:hover{
+    cursor: pointer;
+}
+
+
+/*footer*/
+footer{
+    margin-top: 1rem;
+    font-weight: 300;
+}
+footer a{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 40.25em){
+    .community-card{
+        margin: 2rem;
+    }
+}
+
+@media screen and (max-width: 35.12em){
+    .gr-item:nth-of-type(2){
+        grid-column: 1 / -1;
+        grid-row: 2/3;
+        border-radius: 0;
+    }
+
+    .gr-item:nth-of-type(3){
+        grid-column: 1/-1;
+        grid-row: 3/-1;
+        border-radius: 0 0 0.56rem 0.56rem;
+    }
+    .padd-1{
+        padding: 1.7rem 1.6rem 1.9rem;
+    }
+    
+    .padd-2{
+        padding: 2rem 2rem 2rem;
+    }
+    
+    .padd-btn{
+        padding: 1rem;
+    }
+    .marg-bot-31{
+        margin-bottom: 1rem;
+    }
+    
+    .marg-bot-10{
+        margin-bottom: 0.6rem;
+    }
+    
+    .marg-bot-16{
+        margin-bottom: 1rem;
+    }
+    
+    .marg-left-15{
+        margin-left: 0.93rem;
+    }
+    .head-1{
+        font-size: 1.2rem;
+    }
+    
+    .head-2{
+        font-size: 1rem;
+    }
+    
+    .head-3{
+        font-size: 2rem;
+    }
+    
+    .fnt-wght-800{
+        font-weight: 800;
+    }
+    
+    .fnt-1{
+        font-size: 1rem;
+    }
+    
+    .fnt-2{
+        font-size: 1.009rem;
+    }
+
+    footer p,a{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 16.87em){
+    .community-card{
+        margin: .6rem;
+    }
+
+
+    footer p,a{
+        display: none;
+    }
+    
+}
