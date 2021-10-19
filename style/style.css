@@ -208,13 +208,7 @@ footer a{
     text-decoration: none;
 }
 
-/* @media screen and (max-width: 40.25em){
-    .community-card{
-        margin: 2rem;
-    }
-} */
-
-@media screen and (max-width: 39.93em){
+@media screen and (max-width: 47.93em){
     .community-card{
         margin: 1rem;
     }
@@ -283,16 +277,4 @@ footer a{
         display: none;
     }
 
-}
-
-@media screen and (max-width: 16.87em){
-    .community-card{
-        margin: .6rem;
-    }
-
-
-    footer p,a{
-        display: none;
-    }
-    
 }
